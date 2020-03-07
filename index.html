@@ -17,23 +17,21 @@
             <p>VALUTAOMVANDLARE - BESTÄLL VALUTA</p>
 
                 <div class="row form-group  form-inline" style="margin-top:5%">
-                <select class="form-control" style="margin-left:152px" id="currency-1" required>
-                    
-                </select>
-                <select class="form-control" style="margin-left:290px" id="currency-2" required>
-                    
-                  </select>
+                <select  class="form-control" style="margin-left:152px" id="currency-1" required> </select>
+                <select class="form-control" style="margin-left:290px" id="currency-2" required></select>
                 </div>
             <form class="form-inline" >
                 <div class="form-group container-center-me">
                     <div id="my-input-container">
                     <input type="number"  placeholder="Ange belopp" style="border: none;"   dir="rtl" class="form-control my-input" />
-                    <span class="my-suffixLeft"><img  src="pictures/SEKFlag.png" alt="currency" height="30px" width="30px"> &nbsp SEK </span>
+                    <span id="span1" class="my-suffixLeft">SEK</span>
+                    <span  id="pic2" class="my-suffix" ><img src="pictures/SEKFlag.png" id="picleft" alt="currency" height="30px" width="30px"></span>
+                    
                     </div>
                     <div id="my-input-container">
                     <input type="number"  placeholder="Ange belopp" style="border: none;"  class="form-control my-input" />
-                    <span class="my-suffixrightText" >USD</span>
-                    <span class="my-suffix" ><img src="pictures/USDFlag.png" alt="currency" height="30px" width="30px"></span>
+                    <span id="span2" class="my-suffixrightText" >USD</span>
+                    <span  class="my-suffix" ><img src="pictures/USDFlag.png" id="picright" alt="currency" height="30px" width="30px"></span>
                     </div>
                 
                 </div>

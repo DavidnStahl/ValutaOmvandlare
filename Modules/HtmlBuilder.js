@@ -14,8 +14,30 @@ export default class HtmlBuilder {
         select1.add(option1)
         select2.add(option2)
       })
-
+ 
       }
+
+     static SetStartingInput(currencyNumber1,currencyNumber2){
+        let span1 = document.getElementById("span1")
+        span1.textContent = currencyNumber1
+        let span2 = document.getElementById("span2")
+        span2.textContent = currencyNumber2
+        
+        let pic1 = document.getElementById("picright").src=`pictures/${currencyNumber1}Flag.png`
+        let pic2 = document.getElementById("picleft").src=`pictures/${currencyNumber2}Flag.png`
+      }
+
+      static ChangeCurrencyInputLeftList(currencyNumber1){
+        let span1 = document.getElementById("span1")
+        span1.textContent = currencyNumber1
+        document.getElementById("picleft").src=`pictures/${currencyNumber1}Flag.png`
+      }
+      static ChangeCurrencyInputRightList(currencyNumber1){
+        let span2 = document.getElementById("span2")
+        span2.textContent = currencyNumber1
+        document.getElementById("picright").src=`pictures/${currencyNumber1}Flag.png`
+      }
+
 
       
 }
