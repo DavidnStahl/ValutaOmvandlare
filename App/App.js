@@ -1,9 +1,20 @@
 import Service from '/Services/Service.js';
 
+Service.LoadStartingData();
+
 let listbox1 = document.getElementById("currency-1")
 let listbox2 = document.getElementById("currency-2")
+let input1 = document.getElementById("input-1")
+let input2 = document.getElementById("input-2")
 
-Service.LoadStartingData();
+input1.addEventListener('input', (e) =>{
+    Service.CalculateCurrencyFromLeftInputField(e.target.value)
+    console.log("hej")
+})
+
+/*input2.addEventListener('change', (e) =>{
+    Service.CalculateCurrencyFromRightInputField(e.target.value)
+})*/
 
 listbox1.addEventListener('change', (e) =>{
     Service.ChangeCurrencyInputLeftList(e.target.value)

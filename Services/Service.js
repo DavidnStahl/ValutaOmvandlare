@@ -2,6 +2,8 @@ import CurrencyRepository from '/Modules/CurrencyRepository.js'
 import HtmlBuilder from '/Modules/HtmlBuilder.js'
 import CookieRepository from '/Modules/CookiesRepository.js'
 import CurrencyPairsRepository from '/Modules/LocalStorageCurrencyPairsRepository.js'
+import CalculateExchangeRate from '/Modules/CalculateExchangeRate.js'
+
 
 export default class Service {
     static async LoadStartingData() {
@@ -15,14 +17,15 @@ export default class Service {
       }   
     }
     static async LoadCurrencyPairs(){
-       let currencyPairs = await CurrencyRepository.getListOfCurrencyPairRates()
+       
        if(CurrencyPairsRepository.getCurrencyPair() === null)
        {
+        let currencyPairs = await CurrencyRepository.getListOfCurrencyPairRates()
         CurrencyPairsRepository.createCurrencyPair(currencyPairs)
        }
-       else{
-        let currencyPairFromRepo = CurrencyPairsRepository.getCurrencyPair()
-       }    
+
+       return CurrencyPairsRepository.getCurrencyPair()
+           
     }
     static ChangeCurrencyInputLeftList(currencyNumber1){
       HtmlBuilder.ChangeCurrencyInputLeftList(currencyNumber1)
@@ -40,7 +43,15 @@ export default class Service {
         CookieRepository.createListOfCurrancy(await CurrencyRepository.getListOfCurrency())
         let cookie = CookieRepository.getListOfCurrancy()
         HtmlBuilder.CreateDropBoxes(cookie)
-      }      
+      }
+      
+      static async CalculateCurrencyFromLeftInputField(value){
+        let x = CurrencyPairsRepository.getCurrencyPair()
+        CalculateExchangeRate.CalculateFromLeftToRight(x,value)
+      }
+      static CalculateCurrencyFromRightInputField(value){
+         
+      }
 }
 
  
