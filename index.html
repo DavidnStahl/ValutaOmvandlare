@@ -7,7 +7,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="Styles/styles.css" type="text/css">
+    <script  type="module" src="App/App.js"defer></script>
     <title>Hello, world!</title>
   </head>
   <body>
@@ -17,26 +18,22 @@
 
                 <div class="row form-group  form-inline" style="margin-top:5%">
                 <select class="form-control" style="margin-left:152px" id="currency-1" required>
-                  <option>SEK</option>
-                  <option>EUR</option>
-                  <option>USD</option>
+                    
                 </select>
-                <select class="form-control" style="margin-left:310px" id="currency-1" required>
-                    <option>USD</option>
-                    <option>EUR</option>
-                    <option>USD</option>
+                <select class="form-control" style="margin-left:290px" id="currency-2" required>
+                    
                   </select>
                 </div>
             <form class="form-inline" >
                 <div class="form-group container-center-me">
                     <div id="my-input-container">
-                    <input type="number"  style="border: none;"   dir="rtl" class="form-control my-input" />
-                    <span class="my-suffixLeft"><img  src="sweFlag.png" alt="currency" height="30px" width="30px"> &nbsp SEK </span>
+                    <input type="number"  placeholder="Ange belopp" style="border: none;"   dir="rtl" class="form-control my-input" />
+                    <span class="my-suffixLeft"><img  src="pictures/SEKFlag.png" alt="currency" height="30px" width="30px"> &nbsp SEK </span>
                     </div>
                     <div id="my-input-container">
-                    <input type="number" style="border: none;"  class="form-control my-input" />
+                    <input type="number"  placeholder="Ange belopp" style="border: none;"  class="form-control my-input" />
                     <span class="my-suffixrightText" >USD</span>
-                    <span class="my-suffix" ><img src="USDFlag.png" alt="currency" height="30px" width="30px"></span>
+                    <span class="my-suffix" ><img src="pictures/USDFlag.png" alt="currency" height="30px" width="30px"></span>
                     </div>
                 
                 </div>
