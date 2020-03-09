@@ -6,7 +6,7 @@ export default class HtmlBuilder {
       let select2 = document.getElementById("currency-2")
       list.forEach((currency) => {
         let option1 = document.createElement("option")
-        let option2 = document.createElement("option")
+        let option2 = document.createElement("option")       
         option1.text = currency
         option2.text = currency
         option1.value = currency
