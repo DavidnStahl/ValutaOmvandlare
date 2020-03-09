@@ -11,10 +11,13 @@ export default class Service {
       if(cookie.length < 32){        
         this.LoadDataIfNoCookie()
         CurrencyPairsRepository.DeleteCurrencyPair()
+        this.LoadCurrencyPairs()
       }
       else{
         this.LoadDataIfCookieExists()
-      }   
+        this.LoadCurrencyPairs()
+      }
+         
     }
     static async LoadCurrencyPairs(){
        
@@ -22,8 +25,10 @@ export default class Service {
        {
         let currencyPairs = await CurrencyRepository.getListOfCurrencyPairRates()
         CurrencyPairsRepository.createCurrencyPair(currencyPairs)
+        HtmlBuilder.changeCalculationText(currencyPairs)
        }
-
+       let currencyPair = CurrencyPairsRepository.getCurrencyPair()
+        HtmlBuilder.changeCalculationText(currencyPair)
        return CurrencyPairsRepository.getCurrencyPair()
            
     }
@@ -32,6 +37,7 @@ export default class Service {
     }
     static ChangeCurrencyInputRightList(currencyNumber1){
       HtmlBuilder.ChangeCurrencyInputRightList(currencyNumber1)
+      this.LoadCurrencyPairs()
     }
 
       static LoadDataIfCookieExists(){
@@ -48,10 +54,17 @@ export default class Service {
       static CalculateCurrencyFromLeftInputField(value){
         let currencyPair = CurrencyPairsRepository.getCurrencyPair()
         CalculateExchangeRate.CalculateFromLeftToRight(currencyPair,value)
+        HtmlBuilder.AddCalculation(currencyPair,value)
+
       }
       static CalculateCurrencyFromRightInputField(value){
         let currencyPair = CurrencyPairsRepository.getCurrencyPair()
         CalculateExchangeRate.CalculateFromRightToLeft(currencyPair,value)
+        HtmlBuilder.AddCalculation(currencyPair,value)
+        
+      }
+      static ValutaIsOrdered(){
+        HtmlBuilder.ValutaIsOrdered()
       }
 }
 

@@ -6,6 +6,11 @@ let listbox1 = document.getElementById("currency-1")
 let listbox2 = document.getElementById("currency-2")
 let input1 = document.getElementById("input-1")
 let input2 = document.getElementById("input-2")
+let orderBtn = document.getElementById("orderCurrency")
+
+orderBtn.addEventListener('click', () =>{
+    Service.ValutaIsOrdered()
+})
 
 input1.addEventListener('input', (e) =>{
     Service.CalculateCurrencyFromLeftInputField(e.target.value)
