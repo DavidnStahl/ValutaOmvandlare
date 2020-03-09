@@ -66,8 +66,7 @@ export default class HtmlBuilder {
         if(value == inputright.value){value = inputleft.value}
         let result = value*currencyPairsRate[selectedValuePair.options[selectedValuePair.selectedIndex].value]
         startingtextConvert2.innerHTML = `Total:    ${value} ${span1.textContent} * ${currencyPairsRate[selectedValuePair.options[selectedValuePair.selectedIndex].value].toFixed(4)} = ${result.toFixed(2)} ${span2.textContent}`
-       }
-      
+       }     
      }
      
      static ValutaIsOrdered(){
@@ -85,12 +84,5 @@ export default class HtmlBuilder {
       else{
         startingtextConvert.innerHTML = "";
       }
-
-      
-     }
-      
-
-
-
-      
+     }   
 }

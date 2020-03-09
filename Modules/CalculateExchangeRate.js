@@ -1,5 +1,4 @@
 import HtmlBuilder from '/Modules/HtmlBuilder.js'
-
 export default class CalculateExchangeRate {
     static CalculateFromLeftToRight(currencyPairsRate,value){       
         let selectedValuePair = document.getElementById("currency-2")
@@ -15,10 +14,8 @@ export default class CalculateExchangeRate {
             inputLeft.value = null 
             inputRight.value = null
             HtmlBuilder.ValutaIsOrdered()
-        }
-        
+        }       
     }
-
     static CalculateFromRightToLeft(currencyPairsRate,value){
         let selectedValuePair = document.getElementById("currency-2")
         let inputLeft = document.getElementById("input-1")
@@ -35,4 +32,4 @@ export default class CalculateExchangeRate {
         }
     }
     
-  }
+}
