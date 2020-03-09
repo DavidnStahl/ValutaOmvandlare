@@ -2,6 +2,7 @@ import Service from '/Services/Service.js';
 
 Service.LoadStartingData();
 
+
 let listbox1 = document.getElementById("currency-1")
 let listbox2 = document.getElementById("currency-2")
 let input1 = document.getElementById("input-1")
@@ -32,5 +33,8 @@ listbox2.addEventListener('change', (e) =>{
     input1.value = null
     input2.value = null
 })
+
+
+
 
 

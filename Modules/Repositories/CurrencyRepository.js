@@ -1,5 +1,5 @@
-import fetchDataCurrencyNames from '/Modules/fetchDataCurrencyNames.js'
-import fetchDataCurrencyPairRates from '/Modules/fetchDataCurrencyPairRates.js'
+import fetchDataCurrencyNames from '/Modules/ApiCalls/fetchDataCurrencyNames.js'
+import fetchDataCurrencyPairRates from '/Modules/ApiCalls/fetchDataCurrencyPairRates.js'
 
 export default class CurrencyReository {
   static async getListOfCurrency(){   

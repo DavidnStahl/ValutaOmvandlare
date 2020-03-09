@@ -1,7 +1,7 @@
-import CurrencyRepository from '/Modules/CurrencyRepository.js'
+import CurrencyRepository from '/Modules/Repositories/CurrencyRepository.js'
 import HtmlBuilder from '/Modules/HtmlBuilder.js'
-import CookieRepository from '/Modules/CookiesRepository.js'
-import CurrencyPairsRepository from '/Modules/LocalStorageCurrencyPairsRepository.js'
+import CookieRepository from '/Modules/Repositories/CookiesRepository.js'
+import CurrencyPairsRepository from '/Modules/Repositories/LocalStorageCurrencyPairsRepository.js'
 import CalculateExchangeRate from '/Modules/CalculateExchangeRate.js'
 
 
