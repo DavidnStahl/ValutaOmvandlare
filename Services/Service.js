@@ -67,6 +67,3 @@ export default class Service {
         HtmlBuilder.ValutaIsOrdered()
       }
 }
-
- 
-

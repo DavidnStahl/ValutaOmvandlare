@@ -91,7 +91,7 @@ input::-webkit-inner-spin-button {
   margin-top: 2%;
   margin-left: 16%;
   margin-right: 20%;
-  height: 200px;
+  height: 140px;
 }
 
 #left,
@@ -105,4 +105,8 @@ input::-webkit-inner-spin-button {
 
 #object3 {
   margin-top: 5%;
+}
+
+#object4 {
+  margin-top: 2%;
 }
