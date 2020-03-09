@@ -14,7 +14,8 @@ export default class HtmlBuilder {
         select1.add(option1)
         select2.add(option2)
       })
- 
+       select1.selectedIndex = 26
+       select2.selectedIndex = 30
       }
 
      static SetStartingInput(currencyNumber1,currencyNumber2){

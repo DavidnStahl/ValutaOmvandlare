@@ -45,12 +45,13 @@ export default class Service {
         HtmlBuilder.CreateDropBoxes(cookie)
       }
       
-      static async CalculateCurrencyFromLeftInputField(value){
-        let x = CurrencyPairsRepository.getCurrencyPair()
-        CalculateExchangeRate.CalculateFromLeftToRight(x,value)
+      static CalculateCurrencyFromLeftInputField(value){
+        let currencyPair = CurrencyPairsRepository.getCurrencyPair()
+        CalculateExchangeRate.CalculateFromLeftToRight(currencyPair,value)
       }
       static CalculateCurrencyFromRightInputField(value){
-         
+        let currencyPair = CurrencyPairsRepository.getCurrencyPair()
+        CalculateExchangeRate.CalculateFromRightToLeft(currencyPair,value)
       }
 }
 
