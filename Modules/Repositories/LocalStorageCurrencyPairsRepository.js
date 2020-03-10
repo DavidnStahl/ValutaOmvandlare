@@ -16,7 +16,6 @@ export default class LocalStoragePairsRepository {
         }
         return rates
     }
-
     static DeleteCurrencyPair(){
         window.localStorage.clear()
     }

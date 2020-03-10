@@ -5,7 +5,6 @@ export default class CurrencyReository {
   static async getListOfCurrency(){   
     return await fetchDataCurrencyNames()
   }
-
   static async getListOfCurrencyPairRates(){   
     return await fetchDataCurrencyPairRates()
   }
