@@ -8,6 +8,7 @@ let listbox2 = document.getElementById("currency-2")
 let input1 = document.getElementById("input-1")
 let input2 = document.getElementById("input-2")
 let orderBtn = document.getElementById("orderCurrency")
+let textcalculation = document.getElementById("object2")
 
 orderBtn.addEventListener('click', () =>{
     Service.ValutaIsOrdered()
@@ -26,12 +27,14 @@ listbox1.addEventListener('change', (e) =>{
     Service.LoadCurrencyPairs()
     input1.value = null
     input2.value = null
+    textcalculation.innerHTML = ""
 })
 
 listbox2.addEventListener('change', (e) =>{
     Service.ChangeCurrencyInputRightList(e.target.value)
     input1.value = null
     input2.value = null
+    textcalculation.innerHTML = ""
 })
 
 
