@@ -7,8 +7,8 @@ import CalculateExchangeRate from '/Modules/CalculateExchangeRate.js'
 
 export default class Service {
     static async LoadStartingData() {
-      let cookie = CookieRepository.getListOfCurrancy()     
-      if(cookie.length < 32){                
+      let cookie = CookieRepository.getListOfCurrancy()   
+      if(cookie.length < 2){                
         await this.LoadDataWhenStartWithNoCookie()
         this.LoadCurrencyPairs()
       }
